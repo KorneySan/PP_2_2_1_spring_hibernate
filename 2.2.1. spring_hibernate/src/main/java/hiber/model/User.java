@@ -8,6 +8,7 @@ public class User {
 
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   @Column(name="id")
    private Long id;
 
    @Column(name = "name")
@@ -18,6 +19,10 @@ public class User {
 
    @Column(name = "email")
    private String email;
+
+   @OneToOne
+   @JoinColumn(name="id")
+   private Car car;
 
    public User() {}
    
