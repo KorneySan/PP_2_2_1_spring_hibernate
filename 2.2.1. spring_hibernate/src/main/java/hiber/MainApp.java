@@ -24,10 +24,7 @@ public class MainApp {
 
       List<User> users = userService.listUsers();
       for (User user : users) {
-         System.out.println("Id = "+user.getId());
-         System.out.println("First Name = "+user.getFirstName());
-         System.out.println("Last Name = "+user.getLastName());
-         System.out.println("Email = "+user.getEmail());
+         System.out.println(user.toString());
          System.out.println();
       }
 
@@ -40,18 +37,13 @@ public class MainApp {
 
       List<Car> cars = carService.listCars();
       for (Car car : cars) {
-         System.out.println("Id = "+car.getId());
-         System.out.println("Model = "+car.getModel());
-         System.out.println("Series = "+car.getSeries());
+         System.out.println(car.toString());
          System.out.println();
       }
 
       User userWithCar = userService.getUserByCar("Car3", 30);
       if (userWithCar != null) {
-         System.out.println("Id = "+userWithCar.getId());
-         System.out.println("First Name = "+userWithCar.getFirstName());
-         System.out.println("Last Name = "+userWithCar.getLastName());
-         System.out.println("Email = "+userWithCar.getEmail());
+         System.out.println(userWithCar.toString());
          System.out.println();
       } else {
          System.out.println("No user with such car was found.");
