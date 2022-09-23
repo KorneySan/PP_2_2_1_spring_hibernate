@@ -15,12 +15,12 @@ public class UserServiceImp implements UserService {
 
    private UserDao userDao;
 
-   @Autowired
    private SessionFactory sessionFactory;
 
    @Autowired
-   public UserServiceImp(UserDao userDao) {
+   public UserServiceImp(UserDao userDao, SessionFactory sessionFactory) {
       this.userDao = userDao;
+      this.sessionFactory = sessionFactory;
    }
 
    @Transactional

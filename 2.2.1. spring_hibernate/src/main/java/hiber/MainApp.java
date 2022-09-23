@@ -24,7 +24,7 @@ public class MainApp {
 
       List<User> users = userService.listUsers();
       for (User user : users) {
-         System.out.println(user.toString());
+         System.out.println(user);
          System.out.println();
       }
 
@@ -37,13 +37,13 @@ public class MainApp {
 
       List<Car> cars = carService.listCars();
       for (Car car : cars) {
-         System.out.println(car.toString());
+         System.out.println(car);
          System.out.println();
       }
 
       User userWithCar = userService.getUserByCar("Car3", 30);
       if (userWithCar != null) {
-         System.out.println(userWithCar.toString());
+         System.out.println(userWithCar);
          System.out.println();
       } else {
          System.out.println("No user with such car was found.");
